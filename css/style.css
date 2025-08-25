@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+
+/*
+How to make a growing span
+https://dev.to/matrixersp/how-to-make-an-input-field-grow-shrink-as-you-type-513l
+*/
+input[type="text"],
+span {
+    border: 1px solid;
+}
+
+input[type="text"] {
+    width: 1em;
+}
+span {
+    position: absolute;
+    left: -9999px;
+    display: inline-block;
+}
+/* 
+End of code used
+*/
+
+#command{
+    width: 1em;
+    background-color: black;
+    color: white;
+    outline:none;
+    box-shadow:none;
+    border:none;
+}
