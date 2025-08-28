@@ -1,11 +1,39 @@
+@font-face{
+    font-family: JetBrainsMono;
+    src: url(../font/fonts/webfonts/JetBrainsMono-Regular.woff2) format("woff2");
+}
+
 body{
+    font-family: JetBrainsMono;
+    font-size: 15px;
     background-color: black;
     color: white;
     padding-top: 20px;
     padding-left: 10px;
+
+
+}
+pre{
+    font-size: 15px;
 }
 div{
     padding: 10px;
+    
+}
+a{
+    color: white;
+
+}
+a:hover{
+    background-color: white !important;
+    color: black !important;
+}
+a:active{
+    background-color: white !important;
+    color:black !important;
+}
+a:visited{
+    color:white;
 }
 
 
@@ -16,12 +44,14 @@ https://dev.to/matrixersp/how-to-make-an-input-field-grow-shrink-as-you-type-513
 input[type="text"],
 span {
     border: 1px solid;
+    font-size: 15px;
 }
 
 input[type="text"] {
     width: 1em;
 }
 span {
+    
     position: absolute;
     left: -9999px;
     display: inline-block;
@@ -38,3 +68,19 @@ End of code used
     box-shadow:none;
     border:none;
 }
+
+
+
+.typewriter-animation {
+    animation: 
+      typewriter 5s steps(50) 1s 1 normal both, 
+      blinkingCursor 500ms steps(50) infinite normal;
+  }
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes blinkingCursor{
+    from { border-right-color: rgba(255,255,255,.75); }
+    to { border-right-color: transparent; }
+  }

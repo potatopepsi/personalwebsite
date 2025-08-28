@@ -31,18 +31,17 @@ const GRABDIV = document.getElementById("display");
 
 function sendHelp(){
     const help = [
-        "whoMe"+Array(30).fill('\xa0').join('')+"Displays a blurb of myself",
-        "contact"+Array(31).fill('\xa0').join('')+"Displays list of ways to contact me",
-        // "dir"+Array(38).fill('\xa0').join('')+"Directory of files listed",
-        // "cd [directory]"+Array(20).fill('\xa0').join('')+"Change directory to specified directory",
-        "languages"+Array(31).fill('\xa0').join('')+"Displays a list of languages I know",
-        "education"+Array(31).fill('\xa0').join('')+"Displays a history of my education",
-        "experience"+Array(25).fill('\xa0').join('')+"Displays a history of my work experience",
-        "project"+Array(31).fill('\xa0').join('')+"Displays a history of my projects",
-        "clear"+Array(34).fill('\xa0').join('')+"Clears the terminal"
+        "",
+        "whoseTerminal"+Array(32).fill('\xa0').join('')+"Displays a description about me",
+        "contactInfo"+Array(34).fill('\xa0').join('')+"Displays different ways of contacting me",
+        "langProficiency"+Array(30).fill('\xa0').join('')+"Displays a list of languages I am proficient in",
+        "eduHistory"+Array(35).fill('\xa0').join('')+"Displays a history of my education",
+        "expHistory"+Array(35).fill('\xa0').join('')+"Displays a history of my work experience",
+        "projRecord"+Array(35).fill('\xa0').join('')+"Displays a record of my coding projects",
+        "clear"+Array(40).fill('\xa0').join('')+"Clears the terminal",
+        ""
     ];
     
-
     for(let i = 0 ; i < help.length ; i++){
         const helpText = document.createTextNode(help[i]);
         GRABDIV.appendChild(helpText);
@@ -54,10 +53,11 @@ function sendHelp(){
 
 function sendWho(){
     const whoAmI = [
-        "Hello, World!",
+        "",
         "Name: Catherine Quach",
         "Occupation: Software Engineer",
-        "Interests: Video games, Plant Enthusiast"
+        "Interests: Learning about new technologies, taking care of plants, and reading novels",
+        ""
     ];
 
     for(let i = 0 ; i < whoAmI.length ; i++){
@@ -69,6 +69,13 @@ function sendWho(){
 }
 
 function sendContact(){
+
+    newLine();
+
+    const githubB = document.createTextNode("Coding"+Array(39).fill('\xa0').join(''));
+    GRABDIV.appendChild(githubB);
+
+
     var a = document.createElement('a');
     var linkText = document.createTextNode("GITHUB");
     a.appendChild(linkText);
@@ -79,22 +86,28 @@ function sendContact(){
 
     newLine();
 
-    a = document.createElement('a');
+    const linkedinB = document.createTextNode("Job Social"+Array(35).fill('\xa0').join(''));
+    GRABDIV.appendChild(linkedinB);
+
+    b = document.createElement('a');
     linkText = document.createTextNode("LINKEDIN");
-    a.appendChild(linkText);
-    a.title = "linkedin.com/in/catherinequachx/";
-    a.target = "_blank";
-    a.href="https://www.linkedin.com/in/catherinequachx/";
-    GRABDIV.appendChild(a);
+    b.appendChild(linkText);
+    b.title = "linkedin.com/in/catherinequachx/";
+    b.target = "_blank";
+    b.href="https://www.linkedin.com/in/catherinequachx/";
+    GRABDIV.appendChild(b);
 
     newLine();
 
-    a = document.createElement('a');
+    const emailB = document.createTextNode("Email"+Array(40).fill('\xa0').join(''));
+    GRABDIV.appendChild(emailB);
+
+    c = document.createElement('a');
     linkText = document.createTextNode("EMAIL");
-    a.appendChild(linkText);
-    a.title = "mailto:catherinequachx@gmail.com";
-    a.href="mailto:catherinequachx@gmail.com";
-    GRABDIV.appendChild(a);
+    c.appendChild(linkText);
+    c.title = "mailto:catherinequachx@gmail.com";
+    c.href="mailto:catherinequachx@gmail.com";
+    GRABDIV.appendChild(c);
 
     newLine();
     
@@ -241,27 +254,27 @@ function commandProc(){
             sendHelp();
             clearLine();
             break;
-        case "whoMe":
+        case "whoseTerminal":
             sendWho();
             clearLine();
             break;
-        case "contact":
+        case "contactInfo":
             sendContact();
             clearLine();
             break;
-        case "experience":
+        case "expHistory":
             sendExperience();
             clearLine();
             break;
-        case "education":
+        case "eduHistory":
             sendEducation();
             clearLine();
             break;
-        case "project":
+        case "projRecord":
             sendProject();
             clearLine();
             break;
-        case "languages":
+        case "langProficiency":
             sendList();
             clearLine();
             break;
