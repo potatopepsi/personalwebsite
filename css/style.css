@@ -41,27 +41,28 @@ a:visited{
 How to make a growing span
 https://dev.to/matrixersp/how-to-make-an-input-field-grow-shrink-as-you-type-513l
 */
-input[type="text"],
+/* input[type="text"],
 span {
     border: 1px solid;
     font-size: 15px;
 }
 
 input[type="text"] {
-    width: 1em;
+    width: 4em;
 }
 span {
     
     position: absolute;
     left: -9999px;
     display: inline-block;
-}
+} */
 /* 
 End of code used
 */
 
 #command{
-    width: 1em;
+    /* width: 1em; */
+    width: 1000px;
     background-color: black;
     color: white;
     outline:none;

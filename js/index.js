@@ -1,16 +1,16 @@
-/*
-How to make a growing span
-https://dev.to/matrixersp/how-to-make-an-input-field-grow-shrink-as-you-type-513l
-*/ 
+// /*
+// How to make a growing span
+// https://dev.to/matrixersp/how-to-make-an-input-field-grow-shrink-as-you-type-513l
+// */ 
 
 const input = document.querySelector('input');
-const span = document.querySelector('span');
+// const span = document.querySelector('span');
 
 
-input.addEventListener('input', function (event) {
-    span.innerHTML = this.value.replace(/\s/g, '&nbsp;');
-    this.style.width = span.offsetWidth + 'px';
-});
+// input.addEventListener('input', function (event) {
+//     span.innerHTML = this.value.replace(/\s/g, '&nbsp;');
+//     this.style.width = span.offsetWidth + 'px';
+// });
 
 /* End of Code used
  */
@@ -23,7 +23,15 @@ input.addEventListener("keypress", function(event) {
         event.preventDefault();
         document.getElementById("submitting").click();
     }
+    
 
+});
+
+input.addEventListener("keydown", function(event) {
+    if (event.key === "Tab"){
+        event.preventDefault();
+        autofill();
+    }
 });
 
 // Declaring const values
@@ -239,6 +247,19 @@ function newLine(){
 
 function clearLine(){
     document.getElementById("command").value="";
+}
+
+function autofill(){
+    var input = document.getElementById("command").value;
+    input = String(input);
+    const commands = ["help", "whoseTerminal", "contactInfo", "expHistory", "eduHistory", "projRecord", "langProficiency", "clear"];
+    for(let i = 0; i < commands.length; i++){
+        let temp = commands[i];
+        if(temp.substring(0,input.length) === input ){
+            document.getElementById("command").value=temp;
+        }
+    }
+    
 }
 
 
