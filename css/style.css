@@ -1,3 +1,5 @@
+/* JETBRAINSMONO - https://www.jetbrains.com/lp/mono/#intro */
+
 @font-face{
     font-family: JetBrainsMono;
     src: url(../font/fonts/webfonts/JetBrainsMono-Regular.woff2) format("woff2");
@@ -10,6 +12,7 @@ body{
     color: white;
     padding-top: 20px;
     padding-left: 10px;
+    
 
 
 }
