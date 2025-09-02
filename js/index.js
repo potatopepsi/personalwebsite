@@ -54,7 +54,10 @@ function sendHelp(){
         "expHistory"+Array(35).fill('\xa0').join('')+"Displays a history of my work experience",
         "projRecord"+Array(35).fill('\xa0').join('')+"Displays a record of my coding projects",
         "clear"+Array(40).fill('\xa0').join('')+"Clears the terminal",
-        ""
+        "",
+        "Press TAB to autocomplete commands.",
+        "Use the UP and DOWN arrow keys to visit history of commands.",
+        "",
     ];
     
     for(let i = 0 ; i < help.length ; i++){
@@ -188,17 +191,23 @@ function sendProject(){
         "",
         "Discord Bot"+Array(104).fill('\xa0').join('')+"Dec 2023 - Feb 2024",
         "",
-        "Developed a bot written in Python to automate an RPG with a database, to store up to 100 different",
+        "- Developed a bot written in Python to automate an RPG with a database, to store up to 100 different",
         "users’ statistics, up-to-date currency, and class information.",
         "Language used: Python",
         "",
         "",
         "Through the Universe"+Array(95).fill('\xa0').join('')+"Jan 2025 - Feb 2025",
         "",
-        "- Developed a short walking story game in Godot Engine",
+        "- Developed a brief story-based game using Godot Engine to explore game mechanics and interactive storytelling.",
+        "- Gained hands-on experience with scripting, animation, and game logic in Godot to learn game development skills.",
         "Language used: GDScript",
         "",
         "",
+        "Terminal Personal Website"+Array(90).fill('\xa0').join('')+"Aug 2025 - Sep 2025",
+        "",
+        "- Designed a portfolio website that mimics the Windows Terminal interface.",
+        "Language used: HTML, CSS, JavaScript",
+        ""
       
         
         //         "Timer"+Array(110).fill('\xa0').join('')+"Aug 2025 - Present",
@@ -229,11 +238,16 @@ function sendEducation(){
         ""
         
     ];
-    
+//         const helpText = document.createElement("pre");
+//         helpText.textContent =
+//         `                                                                                                                     
+                                             
+// `;
+//         GRABDIV.appendChild(helpText)
 
     for(let i = 0 ; i < education.length ; i++){
-        const helpText = document.createTextNode(education[i]);
-        GRABDIV.appendChild(helpText);
+        const helpText2 = document.createTextNode(education[i]);
+        GRABDIV.appendChild(helpText2);
         newLine();
     }
 }
